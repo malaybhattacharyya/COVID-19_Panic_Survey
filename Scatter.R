@@ -149,3 +149,38 @@ p <- p + theme_classic(base_size=30) # Other themes = theme_bw, theme_minimal, t
 p
 # Close the pdf file after saving image
 dev.off()
+
+
+# Read data matrix from file
+Panic_Vaccine_India <- read.table("Panic_Vaccine_India.txt", header = TRUE)
+PVI <- as.data.frame(Panic_Vaccine_India) # Matrix to Data Frame
+Panic_Vaccine_Others <- read.table("Panic_Vaccine_Others.txt", header = TRUE)
+PVO <- as.data.frame(Panic_Vaccine_Others) # Matrix to Data Frame
+
+
+# Open a pdf file to save image
+pdf("Scatter_Vaccine_PI.pdf") 
+# Generate scatter plot
+p <- ggplot(data=PVI, aes(x=Vaccine, y=Panic))
+p <- p + geom_point(color="gray", shape=16, size=8)
+p <- p + geom_smooth(method=lm)
+p <- p + stat_cor(method = "pearson", label.x=0.8, label.y=3.4, label.sep=", ", size=12, color="darkred") # Add correlation
+p <- p + labs(title="India", x="Time to get vaccine (months)", y="Panic Score") # Title, axes labels
+p <- p + theme_classic(base_size=30) # Other themes = theme_bw, theme_minimal, theme_void, theme_dark, theme_economist
+p
+# Close the pdf file after saving image
+dev.off()
+
+
+# Open a pdf file to save image
+pdf("Scatter_Vaccine_PO.pdf") 
+# Generate scatter plot
+p <- ggplot(data=PVO, aes(x=Vaccine, y=Panic))
+p <- p + geom_point(color="gray", shape=16, size=8)
+p <- p + geom_smooth(method=lm)
+p <- p + stat_cor(method = "pearson", label.x=0.8, label.y=3.4, label.sep=", ", size=12, color="darkred") # Add correlation
+p <- p + labs(title="Other Countries", x="Time to get vaccine (months)", y="Panic Score") # Title, axes labels
+p <- p + theme_classic(base_size=30) # Other themes = theme_bw, theme_minimal, theme_void, theme_dark, theme_economist
+p
+# Close the pdf file after saving image
+dev.off()

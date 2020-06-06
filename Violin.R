@@ -22,7 +22,7 @@ PO <- as.data.frame(Panic_Others) # Matrix to Data Frame
 # Open a pdf file to save image
 pdf("Violin_Age_PI.pdf")
 # Generate violin plot
-p <- ggplot(data=PI, aes(x=Age, y=Panic)) # Age vs Panic 
+p <- ggplot(data=PI, aes(x=Age, y=Panic)) # Age vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=2, label.y=6.7, size=8)
@@ -37,10 +37,10 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Age_PO.pdf")
 # Generate violin plot
-p <- ggplot(data=PO, aes(x=Age, y=Panic)) # Age vs Panic 
+p <- ggplot(data=PO, aes(x=Age, y=Panic)) # Age vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
-p <- p + stat_compare_means(color="darkred", label.x=2, label.y=7.7, size=8)
+p <- p + stat_compare_means(color="darkred", label.x=2.1, label.y=7.7, size=8)
 p <- p + labs(title="Other Countries", x="Age Group", y="Panic Score") # Title, axes labels
 p <- p + theme_classic(base_size=26) # Other themes = theme_bw, theme_minimal, theme_void, theme_dark, theme_economist
 p <- p + theme(legend.position="top")
@@ -52,7 +52,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Association_PI.pdf")
 # Generate violin plot
-p <- ggplot(data=PI, aes(x=Association, y=Panic)) # Association vs Panic 
+p <- ggplot(data=PI, aes(x=Association, y=Panic)) # Association vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=2, label.y=6.7, size=8)
@@ -82,7 +82,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Education_PI.pdf")
 # Generate violin plot
-p <- ggplot(data=PI, aes(x=Education, y=Panic)) # Education vs Panic 
+p <- ggplot(data=PI, aes(x=Education, y=Panic)) # Education vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=1.5, label.y=6.5, size=8)
@@ -97,7 +97,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Education_PO.pdf")
 # Generate violin plot
-p <- ggplot(data=PO, aes(x=Education, y=Panic)) # Education vs Panic 
+p <- ggplot(data=PO, aes(x=Education, y=Panic)) # Education vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=1.5, label.y=6.5, size=8)
@@ -112,7 +112,8 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Gender_PI.pdf")
 # Generate violin plot
-p <- ggplot(data=PI, aes(x=Gender, y=Panic)) # Gender vs Panic 
+# Skip entries where Gender = "Other"
+p <- ggplot(data=PI[PI$Gender != "Other", ], aes(x=Gender, y=Panic)) # Gender vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=1.3, label.y=6.5, size=8)
@@ -127,7 +128,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Gender_PO.pdf")
 # Generate violin plot
-p <- ggplot(data=PO, aes(x=Gender, y=Panic)) # Gender vs Panic 
+p <- ggplot(data=PO, aes(x=Gender, y=Panic)) # Gender vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=1.3, label.y=6.5, size=8)
@@ -142,7 +143,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Location_PI.pdf")
 # Generate violin plot
-p <- ggplot(data=PI, aes(x=Location, y=Panic)) # Location vs Panic 
+p <- ggplot(data=PI, aes(x=Location, y=Panic)) # Location vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=1.3, label.y=6.5, size=8)
@@ -157,7 +158,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Location_PO.pdf")
 # Generate violin plot
-p <- ggplot(data=PO, aes(x=Location, y=Panic)) # Location vs Panic 
+p <- ggplot(data=PO, aes(x=Location, y=Panic)) # Location vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=1.3, label.y=6.7, size=8)
@@ -172,7 +173,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Profession_PI.pdf")
 # Generate violin plot
-p <- ggplot(data=PI, aes(x=Profession, y=Panic)) # Profession vs Panic 
+p <- ggplot(data=PI, aes(x=Profession, y=Panic)) # Profession vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=2.5, label.y=7.3, size=8)
@@ -187,7 +188,7 @@ dev.off()
 # Open a pdf file to save image
 pdf("Violin_Profession_PO.pdf")
 # Generate violin plot
-p <- ggplot(data=PO, aes(x=Profession, y=Panic)) # Profession vs Panic 
+p <- ggplot(data=PO, aes(x=Profession, y=Panic)) # Profession vs Panic
 p <- p + geom_violin(fill="blue", trim=FALSE, alpha=0.3) # transparency factor is 0.2
 p <- p + geom_boxplot(width=0.2)
 p <- p + stat_compare_means(color="darkred", label.x=2.5, label.y=6.5, size=8)

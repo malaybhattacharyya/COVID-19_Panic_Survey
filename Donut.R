@@ -12,7 +12,7 @@ setwd(sourcePATH)
 
 # Read data frame
 D <- data.frame(
-  AgeGroup = c("<21", "21-30", "31-40", "41-50", "51-60", ">60"),
+  AgeGroup = c("<21", "21-30", "31-40", "41-50", "51-60", "60+"),
   Value = c(153, 631, 147, 63, 64, 17)
   )
 # Open a pdf file to save image

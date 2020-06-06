@@ -67,7 +67,7 @@ None	31-40	Indus.	Male	City	Bachelors	3	<1	<1	0
 Other	21-30	Stud.	Male	City	Bachelors	0	1-2	>3	2
 None	21-30	Stud.	Male	Suburban	Bachelors	0	>3	>3	0
 None	21-30	Acad.	Male	Suburban	Doctorate	3	<1	<1	0
-None	>60	Indus.	Male	City	Bachelors	3	<1	1-2	1
+None	60+	Indus.	Male	City	Bachelors	3	<1	1-2	1
 Other	21-30	Indus.	Male	City	Bachelors	2	<1	<1	0
 None	51-60	Indus.	Male	Suburban	Masters	3	1-2	1-2	0
 None	<21	Stud.	Male	City	Bachelors	3	2-3	>3	1
@@ -158,7 +158,7 @@ Other	21-30	Indus.	Male	City	Bachelors	3	2-3	2-3	0
 None	<21	Stud.	Male	Suburban	Bachelors	0	<1	1-2	1
 Other	21-30	Stud.	Female	Suburban	Bachelors	4	1-2	>3	2
 Other	21-30	Indus.	Male	City	Bachelors	3	1-2	2-3	1
-Health	>60	Health	Male	Suburban	Masters	1	>3	1-2	-2
+Health	60+	Health	Male	Suburban	Masters	1	>3	1-2	-2
 None	21-30	Indus.	Male	City	Bachelors	2	2-3	2-3	0
 None	21-30	Stud.	Male	City	Masters	5	>3	>3	0
 None	21-30	Stud.	Male	City	Bachelors	3	1-2	>3	2
@@ -166,7 +166,7 @@ None	21-30	Stud.	Male	City	Bachelors	3	<1	1-2	1
 None	21-30	Indus.	Male	City	Bachelors	3	1-2	>3	2
 None	21-30	Indus.	Male	City	Bachelors	4	2-3	>3	1
 Research	41-50	Acad.	Male	Suburban	Doctorate	2	<1	2-3	2
-Other	>60	Other	Male	City	Bachelors	2	<1	<1	0
+Other	60+	Other	Male	City	Bachelors	2	<1	<1	0
 None	21-30	Stud.	Male	City	Bachelors	0	<1	<1	0
 None	21-30	Acad.	Female	Suburban	Masters	3	1-2	2-3	1
 None	21-30	Stud.	Male	City	Bachelors	5	2-3	1-2	-1
@@ -188,7 +188,7 @@ None	21-30	Stud.	Male	City	Bachelors	0	2-3	>3	1
 None	21-30	Stud.	Female	City	Bachelors	4	<1	2-3	2
 None	<21	Stud.	Female	City	Bachelors	3	>3	>3	0
 Other	21-30	Stud.	Female	Village	Bachelors	2	1-2	>3	2
-None	>60	Other	Male	City	Masters	0	>3	>3	0
+None	60+	Other	Male	City	Masters	0	>3	>3	0
 None	41-50	Indus.	Male	City	Bachelors	3	<1	1-2	1
 None	31-40	Home	Female	City	Bachelors	4	2-3	>3	1
 None	21-30	Stud.	Female	City	Bachelors	0	1-2	1-2	0
@@ -254,7 +254,7 @@ Other	21-30	Stud.	Female	Suburban	Bachelors	3	>3	>3	0
 Research	21-30	Acad.	Male	Village	Masters	4	1-2	2-3	1
 None	41-50	Indus.	Male	City	Masters	0	<1	<1	0
 None	21-30	Stud.	Male	Suburban	Masters	3	2-3	>3	1
-None	>60	Busin.	Male	City	Bachelors	4	2-3	1-2	-1
+None	60+	Busin.	Male	City	Bachelors	4	2-3	1-2	-1
 None	21-30	Stud.	Female	Village	Masters	4	<1	2-3	2
 None	41-50	Indus.	Male	City	Masters	2	1-2	>3	2
 Other	21-30	Stud.	Female	City	Masters	3	1-2	2-3	1
@@ -264,7 +264,7 @@ Other	21-30	Stud.	Male	Village	Masters	3	1-2	1-2	0
 Other	21-30	Stud.	Female	City	School	2	1-2	>3	2
 Govt.	41-50	Acad.	Male	Suburban	Doctorate	0	1-2	2-3	1
 Other	21-30	Stud.	Female	City	Masters	2	1-2	1-2	0
-None	>60	Busin.	Male	City	Bachelors	0	<1	<1	0
+None	60+	Busin.	Male	City	Bachelors	0	<1	<1	0
 Health	51-60	Indus.	Male	City	Masters	0	2-3	>3	1
 Govt.	51-60	Health	Male	City	Bachelors	4	2-3	2-3	0
 Research	21-30	Stud.	Female	Suburban	Doctorate	3	<1	2-3	2
@@ -278,7 +278,7 @@ None	41-50	Indus.	Male	Suburban	Bachelors	2	<1	1-2	1
 Other	51-60	Other	Male	City	Bachelors	0	<1	2-3	2
 Health	21-30	Indus.	Male	Village	Bachelors	0	1-2	>3	2
 Other	51-60	Busin.	Female	City	Masters	3	1-2	1-2	0
-Health	>60	Health	Male	City	Masters	3	1-2	2-3	1
+Health	60+	Health	Male	City	Masters	3	1-2	2-3	1
 Other	21-30	Other	Female	City	Bachelors	4	1-2	>3	2
 Other	31-40	Other	Male	Village	Bachelors	3	1-2	1-2	0
 Other	51-60	Indus.	Male	City	Masters	3	1-2	2-3	1
@@ -292,7 +292,7 @@ None	51-60	Other	Male	City	Bachelors	0	1-2	1-2	0
 Research	21-30	Stud.	Male	City	Masters	2	<1	2-3	2
 None	21-30	Stud.	Female	Suburban	Masters	4	>3	>3	0
 Other	51-60	Indus.	Male	City	Masters	3	<1	1-2	1
-None	>60	Other	Male	City	Doctorate	2	<1	<1	0
+None	60+	Other	Male	City	Doctorate	2	<1	<1	0
 Govt.	31-40	Acad.	Male	City	Doctorate	4	<1	1-2	1
 None	21-30	Stud.	Female	City	Masters	3	1-2	>3	2
 Other	51-60	Other	Male	City	Bachelors	3	2-3	>3	1
@@ -309,7 +309,7 @@ None	21-30	Stud.	Male	Suburban	Masters	3	>3	>3	0
 None	31-40	Other	Male	City	Masters	3	<1	1-2	1
 None	51-60	Other	Male	Suburban	Masters	0	<1	<1	0
 Research	21-30	Stud.	Male	City	Masters	2	1-2	>3	2
-Other	>60	Other	Male	City	Masters	4	<1	1-2	1
+Other	60+	Other	Male	City	Masters	4	<1	1-2	1
 None	21-30	Stud.	Female	Suburban	Masters	0	1-2	>3	2
 None	<21	Stud.	Male	City	Bachelors	3	<1	1-2	1
 Govt.	21-30	Other	Male	City	Bachelors	2	<1	2-3	2
@@ -448,7 +448,7 @@ None	51-60	Indus.	Male	City	Bachelors	5	<1	2-3	2
 Other	51-60	Busin.	Male	City	Bachelors	0	1-2	2-3	1
 Other	21-30	Acad.	Female	City	Masters	1	1-2	2-3	1
 Other	41-50	Busin.	Female	City	Masters	3	1-2	2-3	1
-Other	>60	Other	Male	City	Bachelors	1	1-2	1-2	0
+Other	60+	Other	Male	City	Bachelors	1	1-2	1-2	0
 None	21-30	Stud.	Male	Village	Bachelors	2	<1	<1	0
 Health	41-50	Indus.	Male	Suburban	Bachelors	1	1-2	2-3	1
 None	<21	Stud.	Male	City	Bachelors	2	1-2	2-3	1
@@ -487,14 +487,14 @@ Research	21-30	Acad.	Female	City	Doctorate	5	2-3	>3	1
 None	21-30	Stud.	Male	Village	Bachelors	2	1-2	1-2	0
 Research	31-40	Acad.	Female	City	Doctorate	1	<1	<1	0
 None	41-50	Indus.	Female	City	Bachelors	3	<1	2-3	2
-Health	>60	Health	Male	City	Bachelors	1	<1	2-3	2
+Health	60+	Health	Male	City	Bachelors	1	<1	2-3	2
 None	31-40	Indus.	Male	City	Masters	4	1-2	1-2	0
 Health	41-50	Health	Male	City	Masters	1	1-2	1-2	0
 None	41-50	Indus.	Male	City	Masters	4	1-2	1-2	0
 None	31-40	Acad.	Male	City	Doctorate	4	<1	1-2	1
 Other	21-30	Indus.	Male	City	Bachelors	4	1-2	1-2	0
 Other	<21	Stud.	Male	City	Bachelors	0	2-3	2-3	0
-None	>60	Other	Male	Suburban	Doctorate	2	<1	<1	0
+None	60+	Other	Male	Suburban	Doctorate	2	<1	<1	0
 Other	51-60	Indus.	Male	City	Bachelors	2	<1	1-2	1
 None	31-40	Indus.	Male	City	Masters	3	>3	<1	-3
 Health	51-60	Health	Female	City	Masters	4	>3	2-3	-1
@@ -518,7 +518,7 @@ None	21-30	Indus.	Male	City	Bachelors	4	>3	>3	0
 None	21-30	Indus.	Male	City	Bachelors	1	<1	2-3	2
 Other	21-30	Stud.	Male	City	Bachelors	3	1-2	>3	2
 Other	21-30	Stud.	Male	City	Masters	1	1-2	>3	2
-Other	>60	Other	Male	City	Masters	0	2-3	2-3	0
+Other	60+	Other	Male	City	Masters	0	2-3	2-3	0
 Other	21-30	Indus.	Male	Suburban	Masters	4	1-2	1-2	0
 None	21-30	Stud.	Female	City	Bachelors	3	1-2	2-3	1
 None	21-30	Stud.	Female	City	Bachelors	1	1-2	1-2	0
@@ -531,7 +531,7 @@ None	31-40	Indus.	Male	City	Bachelors	3	2-3	2-3	0
 None	21-30	Stud.	Male	City	Masters	2	<1	<1	0
 None	41-50	Indus.	Male	City	Bachelors	5	1-2	2-3	1
 Health	21-30	Health	Female	City	Bachelors	3	2-3	<1	-2
-Other	>60	Other	Female	City	Bachelors	2	<1	<1	0
+Other	60+	Other	Female	City	Bachelors	2	<1	<1	0
 None	21-30	Stud.	Male	City	Bachelors	2	2-3	>3	1
 None	21-30	Acad.	Male	City	Masters	0	1-2	1-2	0
 None	21-30	Indus.	Female	City	Bachelors	2	<1	<1	0
@@ -577,7 +577,7 @@ None	21-30	Stud.	Male	City	Bachelors	2	2-3	>3	1
 Other	21-30	Acad.	Male	Suburban	Masters	3	>3	>3	0
 Govt.	21-30	Indus.	Female	City	Bachelors	3	>3	>3	0
 Other	21-30	Stud.	Female	City	Masters	2	1-2	<1	-1
-None	>60	Busin.	Male	City	Bachelors	1	1-2	1-2	0
+None	60+	Busin.	Male	City	Bachelors	1	1-2	1-2	0
 None	31-40	Other	Female	Suburban	Masters	0	1-2	2-3	1
 Health	21-30	Health	Female	City	Masters	5	1-2	>3	2
 None	21-30	Indus.	Female	City	Masters	3	1-2	1-2	0
@@ -735,7 +735,7 @@ Other	21-30	Stud.	Female	City	Masters	2	<1	1-2	1
 Other	31-40	Indus.	Male	Suburban	Bachelors	0	<1	<1	0
 None	21-30	Acad.	Female	City	Masters	3	1-2	2-3	1
 None	21-30	Stud.	Female	City	Bachelors	2	>3	>3	0
-None	>60	Other	Female	City	Bachelors	1	<1	<1	0
+None	60+	Other	Female	City	Bachelors	1	<1	<1	0
 Other	21-30	Stud.	Male	Village	Masters	2	>3	2-3	-1
 Other	21-30	Stud.	Female	Suburban	Bachelors	2	2-3	2-3	0
 None	21-30	Stud.	Male	Suburban	Masters	3	>3	>3	0

@@ -13,7 +13,7 @@ Research	31-40	Stud.	Male	City	Doctorate	4	<1	<1	0
 Health	21-30	Stud.	Male	City	Bachelors	0	<1	1-2	1
 Other	21-30	Stud.	Female	City	Bachelors	4	2-3	>3	1
 Other	21-30	Stud.	Female	City	Bachelors	2	1-2	>3	2
-Research	>60	Acad.	Female	City	Doctorate	1	1-2	2-3	1
+Research	60+	Acad.	Female	City	Doctorate	1	1-2	2-3	1
 None	51-60	Other	Male	City	Masters	2	2-3	2-3	0
 Research	51-60	Acad.	Female	City	Doctorate	3	1-2	1-2	0
 None	51-60	Indus.	Male	City	Masters	4	1-2	2-3	1
