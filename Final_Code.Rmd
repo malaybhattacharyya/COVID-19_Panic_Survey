@@ -1,0 +1,124 @@
+---
+title: "FInal_Plots"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(plyr)
+library(reshape)
+library(tidyverse)
+library(scales)
+library(vcd)
+```
+
+```{r}
+covid_india = read.csv("Covid_india.csv")
+covid_world = read.csv("Covid_world.csv")
+```
+
+```{r}
+#pdf("India_panic_Mental.pdf")
+data.test <- chisq.test(covid_india$Present.Mental.Health,covid_india$Panic.Level)
+ggplot(aes(x=Panic.Level, y=Present.Mental.Health), data = covid_india) + geom_violin(trim = F, fill="coral3", alpha=0.2) + ggtitle("India") + ylab("Present Mental Health during Lockdown") + xlab("Panic Level") + geom_boxplot(width=0.1) + annotate(geom="text", x=2, y=3.35, label= paste("Chi.Square:", "x²(", data.test$parameter, ")=", round(data.test$statistic, 2), "; p=", signif(data.test$p.value, digits = 3)), color="firebrick") 
+#dev.off() 
+#chisq.test(covid_india$Present.Mental.Health,covid_india$Panic.Level)
+```
+
+```{r}
+data.test <- chisq.test(covid_world$Present.Mental.Health,covid_world$Panic.Level)
+pdf("World_panic_Mental.pdf")
+ggplot(aes(x=Panic.Level, y=Present.Mental.Health), data = covid_world) + geom_violin(trim = F, fill="coral3", alpha=0.2) + ggtitle("Other Countries") + ylab("Present Mental Health during Lockdown") + xlab("Panic Level") + geom_boxplot(width=0.1) + annotate(geom="text", x=2, y=3.5, label= paste("Chi.Square:", "x²(", data.test$parameter, ")=", round(data.test$statistic, 2), "; p=", signif(data.test$p.value, digits = 3)), color="firebrick") 
+dev.off() 
+```
+
+```{r}
+data.test <- chisq.test(covid_india$Present.Mental.Health,covid_india$What.do.you.feel.after.reading.a.post.on.COVID.19.in.social.media.)
+pdf("India_Read_Mental.pdf")
+ggplot(aes(x=What.do.you.feel.after.reading.a.post.on.COVID.19.in.social.media., y=Present.Mental.Health, fill=Present.Mental.Health), data = covid_india) + geom_violin(trim = F, alpha=0.2) + ggtitle("India") + ylab("Present Mental Health during Lockdown") + xlab("Effect of reading articles related to Covid-19") + theme(axis.text.x = element_text(angle = 32)) + annotate(geom="text", x=2.5, y=8.5, label= paste("Chi.Square:", "x²(", data.test$parameter, ")=", round(data.test$statistic, 2), "; p=", signif(data.test$p.value, digits = 3)), color="firebrick") 
+dev.off() 
+```
+```{r}
+data.test <- chisq.test(covid_world$Present.Mental.Health,covid_world$What.do.you.feel.after.reading.a.post.on.COVID.19.in.social.media.)
+pdf("World_Read_Mental.pdf")
+ggplot(aes(x=What.do.you.feel.after.reading.a.post.on.COVID.19.in.social.media., y=Present.Mental.Health, fill=Present.Mental.Health), data = covid_world) + geom_violin(trim = F, alpha=0.2) + ggtitle("Other Countries") + ylab("Present Mental Health during Lockdown") + xlab("Effect of reading articles related to Covid-19") + theme(axis.text.x = element_text(angle = 32)) + annotate(geom="text", x=2, y=8.5, label= paste("Chi.Square:", "x²(", data.test$parameter, ")=", round(data.test$statistic, 2), "; p=", signif(data.test$p.value, digits = 3)), color="firebrick") 
+dev.off() 
+```
+
+```{r}
+data.test <- chisq.test(covid_india$Present.Mental.Health,covid_india$What.has.happened.to.your.productivity..any.kind.of..after.the.lockdown.)
+pdf("India_Productivity_Mental.pdf")
+ggplot(aes(x=What.has.happened.to.your.productivity..any.kind.of..after.the.lockdown., y=Present.Mental.Health, fill=Present.Mental.Health), data = covid_india) + geom_violin(trim = F, alpha=0.2) + ggtitle("India") + ylab("Present Mental Health during Lockdown") + xlab("Effect on Productivity during Covid-19 Lockdown") + theme(axis.text.x = element_text(angle = 32)) + annotate(geom="text", x=2, y=6, label= paste("Chi.Square:", "x²(", data.test$parameter, ")=", round(data.test$statistic, 2), "; p=", signif(data.test$p.value, digits = 3)), color="firebrick")
+dev.off() 
+```
+
+```{r}
+data.test <- chisq.test(covid_world$Present.Mental.Health,covid_world$What.has.happened.to.your.productivity..any.kind.of..after.the.lockdown.)
+pdf("World_Productivity_Mental.pdf")
+ggplot(aes(x=What.has.happened.to.your.productivity..any.kind.of..after.the.lockdown., y=Present.Mental.Health, fill=Present.Mental.Health), data = covid_world) + geom_violin(trim = F, alpha=0.2) + ggtitle("Other Countries") + ylab("Present Mental Health during Lockdown") + xlab("Effect on Productivity during Covid-19 Lockdown") + theme(axis.text.x = element_text(angle = 32)) + annotate(geom="text", x=2, y=8.35, label= paste("Chi.Square:", "x²(", data.test$parameter, ")=", round(data.test$statistic, 2), "; p=", signif(data.test$p.value, digits = 3)), color="firebrick")
+dev.off() 
+```
+
+```{r}
+chisq.test(covid_india$Reducing.Panic,covid_india$Association.with.COVID.19)
+pdf("Count_Assc_ReducePanic_India.pdf")
+ggplot(covid_india, aes(y=Association.with.COVID.19, x=Reducing.Panic, colour=Reducing.Panic)) +  geom_count() + labs(x="Ways to Reducing Panic", y="Association with Covid-19") + ggtitle("India")  + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+dev.off() 
+```
+
+```{r}
+chisq.test(covid_world$Reducing.Panic,covid_world$Association.with.COVID.19)
+pdf("Count_Assc_ReducePanic_World.pdf")
+ggplot(covid_world, aes(y=Association.with.COVID.19, x=Reducing.Panic, colour=Reducing.Panic)) +  geom_count() + labs(x="Ways to Reducing Panic", y="Association with Covid-19") + ggtitle("India")  + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+dev.off() 
+```
+
+```{r}
+pdf("Count_Covid19_Prof_India.pdf")
+ggplot(covid_india, aes(y=Profession, x=COVID.19.is, colour=COVID.19.is)) +  geom_count() + labs(x="What is Covid-19", y="Profession") + ggtitle("India")  + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+dev.off() 
+chisq.test(covid_india$COVID.19.is,covid_india$Profession)
+```
+
+```{r}
+pdf("Count_Covid19_Prof_World.pdf")
+ggplot(covid_world, aes(y=Profession, x=COVID.19.is, colour=COVID.19.is)) +  geom_count() + labs(x="What is Covid-19", y="Profession") + ggtitle("Other Countries")  + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+dev.off() 
+chisq.test(covid_world$COVID.19.is,covid_world$Profession)
+```
+
+
+```{r}
+pdf("Count_Pneumonia_Prof_India.pdf")
+ggplot(covid_india, aes(y=Profession, x=Will.pneumonia.vaccines.protect.you.against.the.coronavirus., colour=Will.pneumonia.vaccines.protect.you.against.the.coronavirus.)) +  geom_count() + labs(x="Need for Pneumonia Vaccination for Prevention", y="Profession") + ggtitle("India")  + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+dev.off() 
+chisq.test(covid_india$Will.pneumonia.vaccines.protect.you.against.the.coronavirus.,covid_india$Profession)
+```
+
+
+```{r}
+pdf("Count_Pneumonia_Prof_World.pdf")
+ggplot(covid_world, aes(y=Profession, x=Will.pneumonia.vaccines.protect.you.against.the.coronavirus., colour=Will.pneumonia.vaccines.protect.you.against.the.coronavirus.)) +  geom_count() + labs(x="What is Covid-19", y="Profession") + ggtitle("Need for Pneumonia Vaccination for Prevention")  + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+dev.off() 
+chisq.test(covid_world$Will.pneumonia.vaccines.protect.you.against.the.coronavirus.,covid_world$Profession)
+```
+
+```{r}
+chisq.test(covid_india$After.returning.from.grocery.shopping.you, covid_india$Profession)
+chisq.test(covid_world$Action.after.outdoor.Grocery, covid_world$Profession)
+```
+
+```{r}
+chisq.test(covid_india$Meeting.Covid.19.possitive.patient, covid_india$Profession)
+chisq.test(covid_world$Meeting.Covid.19.possitive.patient, covid_world$Profession)
+```
+
+```{r}
+chisq.test(covid_india$If.your.neighbor.shows.COVID.19.symptoms..what.will.you.do., covid_india$Profession)
+chisq.test(covid_world$If.your.neighbor.shows.COVID.19.symptoms..what.will.you.do., covid_world$Profession)
+```
+
